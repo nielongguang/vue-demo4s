@@ -27,15 +27,15 @@
             测试设置$event
         </AButton>
 
-            <a-Button type="primary" @click="testMethod1($event)" class="t10">
+            <a-button type="primary" @click="testMethod1($event)" class="t10">
                 测试set
-            </a-Button>
+            </a-button>
 
-            <a-Button type="primary" @click="testMethod2($event)" class="t10">
+            <a-button type="primary" @click="testMethod2($event)" class="t10">
                 测试components
-            </a-Button>
+            </a-button>
         <!--计算属性 -->
-        <li v-for="n in evenNumbers">{{ n }}</li>
+        <li v-for="(n,index) in evenNumbers" :key="index">{{ n }}</li>
         <!--使用 v-model.number可以使输入变为数值,但是不限制精度-->
             <a-input v-model.number="testObj.age" class="t10"></a-input>
 
@@ -53,56 +53,55 @@
 </template>
 
 <script>
-import Button from 'iview/src/components/button/button'
-import Card from 'iview/src/components/card/card'
+import Card from "iview/src/components/card/card"
 export default {
-  components: { Card, Button },
-  data () {
-    return {
-      age: 0,
-      question: [],
-      numbers: [1, 2, 3, 4, 5],
-      items: [],
-      testObj: { name: 'nlg', age: 'hello' }
-    }
-  },
-  watch: {
-    // 必须为字符串否则不识别 deep表示深度搜索深度 immediate表示立刻执行
-    'testObj': {
-      handler (a, b) {
-        console.log(a)
-        console.log(b)
-      },
-      deep: true,
-      immediate: true
-    },
-    items () {
-      console.log(this.items)
-    }
-  },
-  computed: {
-    evenNumbers () {
-      return this.numbers.filter(function (number) {
-        return number % 2 === 0
-      })
-    }
-  },
-  name: 'slot-demo',
-  methods: {
-    testMethod (a) {
-      console.log(a)
-    },
-    testMethod1 () {
-      this.$set(this.items, this.items.length, 'hello')
-      this.$set(this.numbers, this.numbers.length, 12)
-      this.testObj.age = 11
-    },
-    testMethod2 () {
-      this.numbers.splice(this.numbers.length - 1, 1)
-      this.items.splice(this.items.length - 1, 1)
-    }
-
+ components: { Card },
+ data () {
+  return {
+   age: 0,
+   question: [],
+   numbers: [1, 2, 3, 4, 5],
+   items: [],
+   testObj: { name: "nlg", age: "hello" }
   }
+ },
+ watch: {
+  // 必须为字符串否则不识别 deep表示深度搜索深度 immediate表示立刻执行
+  "testObj": {
+   handler (a, b) {
+    console.log(a)
+    console.log(b)
+   },
+   deep: true,
+   immediate: true
+  },
+  items () {
+   console.log(this.items)
+  }
+ },
+ computed: {
+  evenNumbers () {
+   return this.numbers.filter(function (number) {
+    return number % 2 === 0
+   })
+  }
+ },
+ name: "slot-demo",
+ methods: {
+  testMethod (a) {
+   console.log(a)
+  },
+  testMethod1 () {
+   this.$set(this.items, this.items.length, "hello")
+   this.$set(this.numbers, this.numbers.length, 12)
+   this.testObj.age = 11
+  },
+  testMethod2 () {
+   this.numbers.splice(this.numbers.length - 1, 1)
+   this.items.splice(this.items.length - 1, 1)
+  }
+
+ }
 }
 </script>
 

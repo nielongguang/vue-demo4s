@@ -8,28 +8,28 @@
 </template>
 
 <script>
-import SlotDemo from './slot-demo-child'
+import SlotDemo from "./slot-demo-child"
 export default {
-  methods: {
-    dealMethod (a) {
-      console.log(a)
-    }
-  },
-  name: 'slot-demo-parent',
-  components: { SlotDemo },
-  data () {
-    return { num: 0 }
-  },
-  watch: {
-    'num': {
-      handler (a, b) {
-        console.log(a)
-        console.log(b)
-      },
-      deep: true,
-      immediate: true
-    }
+ methods: {
+  dealMethod (a) {
+   console.log(a)
   }
+ },
+ name: "slot-demo-parent",
+ components: { SlotDemo },
+ data () {
+  return { num: 0 }
+ },
+ watch: {
+  "num": {
+   handler (a, b) {
+    console.log(a)
+    console.log(b)
+   },
+   deep: true,
+   immediate: true
+  }
+ }
 }
 </script>
 

@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import SlotDemo from './slot-demo-child'
+import SlotDemo from "./slot-demo-child"
 export default {
-  name: 'Dashboard',
-  components: { SlotDemo }
+ name: "Dashboard",
+ components: { SlotDemo }
 }
 </script>
 

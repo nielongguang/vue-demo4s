@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import ExceptionPage from './ExceptionPage'
+import ExceptionPage from "./ExceptionPage"
 
 export default {
-  components: {
-    ExceptionPage
-  }
+ components: {
+  ExceptionPage
+ }
 }
 </script>
 
