@@ -9,9 +9,9 @@ import { asyncRouterMap, constantRouterMap } from '@/config/router.config'
  */
 function hasPermission (permission, route) {
   if (route.meta && route.meta.permission) {
-    let flag = false;
+    let flag = false
     for (let i = 0, len = permission.length; i < len; i++) {
-      flag = route.meta.permission.includes(permission[i]);
+      flag = route.meta.permission.includes(permission[i])
       if (flag) {
         return true
       }
@@ -57,20 +57,20 @@ const permission = {
   },
   mutations: {
     SET_ROUTERS: (state, routers) => {
-      state.addRouters = routers;
+      state.addRouters = routers
       state.routers = constantRouterMap.concat(routers)
     }
   },
   actions: {
     GenerateRoutes ({ commit }, data) {
       return new Promise(resolve => {
-        const { roles } = data;
-        const accessedRouters = filterAsyncRouter(asyncRouterMap, roles);
-        commit('SET_ROUTERS', accessedRouters);
+        const { roles } = data
+        const accessedRouters = filterAsyncRouter(asyncRouterMap, roles)
+        commit('SET_ROUTERS', accessedRouters)
         resolve()
       })
     }
   }
-};
+}
 
 export default permission

@@ -1,5 +1,6 @@
 <template>
     <div class="t10">
+        <slot  name="main"></slot>
         <Card>
             iview
          <i-button>1231s</i-button>
@@ -10,7 +11,6 @@
         <a-button>123</a-button>
         </a-card>
 
-
         <header>
             <slot name="header"></slot>
         </header>
@@ -18,7 +18,7 @@
             <slot></slot>
         </main>
         <footer>
-            <slot name="footer"></slot>
+            <slot name="footer" :data="testObj"></slot>
         </footer>
 
         <a-card>
@@ -53,57 +53,57 @@
 </template>
 
 <script>
-    import Button from "iview/src/components/button/button";
-    import Card from "iview/src/components/card/card";
-    export default {
-        components: {Card, Button},
-        data() {
-            return {
-                age:0,
-                question:[],
-                numbers: [1, 2, 3, 4, 5],
-                items: [],
-                testObj: {name:'nlg',age:'hello'},
-            }
-        },
-        watch:{
-            //必须为字符串否则不识别 deep表示深度搜索深度 immediate表示立刻执行
-            'testObj':  {
-                handler(a, b) {
-                    console.log(a);
-                    console.log(b)
-                },
-                deep: true,
-                immediate: true
-            },
-            items(){
-                console.log(this.items)
-            }
-        },
-        computed: {
-            evenNumbers(){
-                return this.numbers.filter(function (number) {
-                    return number % 2 === 0
-                })
-            },
-        },
-            name: "slot-demo",
-            methods: {
-                testMethod(a) {
-                 console.log(a)
-                },
-                testMethod1() {
-                    this.$set(this.items, this.items.length, 'hello');
-                    this.$set(this.numbers, this.numbers.length, 12);
-                    this.testObj.age=11
-                } ,
-                testMethod2() {
-                    this.numbers.splice(this.numbers.length-1,1);
-                    this.items.splice(this.items.length-1,1);
-                }
+import Button from 'iview/src/components/button/button'
+import Card from 'iview/src/components/card/card'
+export default {
+  components: { Card, Button },
+  data () {
+    return {
+      age: 0,
+      question: [],
+      numbers: [1, 2, 3, 4, 5],
+      items: [],
+      testObj: { name: 'nlg', age: 'hello' }
+    }
+  },
+  watch: {
+    // 必须为字符串否则不识别 deep表示深度搜索深度 immediate表示立刻执行
+    'testObj': {
+      handler (a, b) {
+        console.log(a)
+        console.log(b)
+      },
+      deep: true,
+      immediate: true
+    },
+    items () {
+      console.log(this.items)
+    }
+  },
+  computed: {
+    evenNumbers () {
+      return this.numbers.filter(function (number) {
+        return number % 2 === 0
+      })
+    }
+  },
+  name: 'slot-demo',
+  methods: {
+    testMethod (a) {
+      console.log(a)
+    },
+    testMethod1 () {
+      this.$set(this.items, this.items.length, 'hello')
+      this.$set(this.numbers, this.numbers.length, 12)
+      this.testObj.age = 11
+    },
+    testMethod2 () {
+      this.numbers.splice(this.numbers.length - 1, 1)
+      this.items.splice(this.items.length - 1, 1)
+    }
 
-            }
-        }
+  }
+}
 </script>
 
 <style scoped lang="less">
