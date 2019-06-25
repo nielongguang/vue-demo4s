@@ -28,16 +28,16 @@ const Item = {
     <div class="term">{this.$props.term}</div>
     <div class="content">{this.$slots["default"]}</div>
    </a-col>
-  )
+  );
  }
-}
+};
 
 const responsive = {
  1: { xs: 24 },
  2: { xs: 24, sm: 12 },
  3: { xs: 24, sm: 12, md: 8 },
  4: { xs: 24, sm: 12, md: 6 }
-}
+};
 
 export default {
  name: "DetailList",
@@ -69,9 +69,9 @@ export default {
  provide () {
   return {
    col: this.col > 4 ? 4 : this.col
-  }
+  };
  }
-}
+};
 </script>
 
 <style lang="less">

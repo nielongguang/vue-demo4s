@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import PageHeader from "./PageHeader"
+import PageHeader from "./PageHeader";
 
 export default {
  name: "LayoutContent",
@@ -81,7 +81,7 @@ export default {
  },
  methods: {
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

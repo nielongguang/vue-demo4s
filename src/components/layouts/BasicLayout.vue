@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import RouteView from "@/components/layouts/RouteView"
-import MultiTab from "@/components/MultiTab"
-import GlobalLayout from "@/components/page/GlobalLayout"
+import RouteView from "@/components/layouts/RouteView";
+import MultiTab from "@/components/MultiTab";
+import GlobalLayout from "@/components/page/GlobalLayout";
 
 export default {
  name: "BasicLayout",
@@ -20,9 +20,9 @@ export default {
   GlobalLayout
  },
  data () {
-  return {}
+  return {};
  }
-}
+};
 </script>
 
 <style lang="less">

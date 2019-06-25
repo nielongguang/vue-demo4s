@@ -1,8 +1,8 @@
-const path = require("path")
-const webpack = require("webpack")
+const path = require("path");
+const webpack = require("webpack");
 
 function resolve (dir) {
- return path.join(__dirname, dir)
+ return path.join(__dirname, dir);
 }
 
 // vue.config.js
@@ -39,7 +39,7 @@ module.exports = {
    .set("@comp", resolve("src/components"))
    .set("@views", resolve("src/views"))
    .set("@layout", resolve("src/layout"))
-   .set("@static", resolve("src/static"))
+   .set("@static", resolve("src/static"));
  },
 
  css: {
@@ -79,6 +79,5 @@ module.exports = {
    }
   }
  },
-
- lintOnSave: undefined
-}
+ lintOnSave: false
+};

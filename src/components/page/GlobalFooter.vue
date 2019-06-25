@@ -8,9 +8,9 @@ export default {
  name: "LayoutFooter",
  data () {
   return {
-  }
+  };
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

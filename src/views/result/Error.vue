@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Result from "./Result"
+import Result from "./Result";
 
 export default {
  name: "Error",
@@ -35,9 +35,9 @@ export default {
   return {
    title: "提交失败",
    description: "请核对并修改以下信息后，再重新提交。"
-  }
+  };
  }
-}
+};
 </script>
 
 <style scoped>

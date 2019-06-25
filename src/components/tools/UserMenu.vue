@@ -22,13 +22,13 @@
             <span>账户设置</span>
           </router-link>
         </a-menu-item>
-        <a-menu-item key="2" disabled>
-          <a-icon type="setting"/>
-          <span>测试</span>
-        </a-menu-item>
-        <a-menu-divider/>
+        <!--<a-menu-item key="2" disabled>-->
+          <!--<a-icon type="setting"/>-->
+          <!--<span>测试</span>-->
+        <!--</a-menu-item>-->
+        <a-menu-divider></a-menu-divider>
         <a-menu-item key="3">
-          <a href="javascript:;" @click="handleLogout">
+          <a href="javascript:" @click="handleLogout">
             <a-icon type="logout"/>
             <span>退出登录</span>
           </a>
@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import HeaderNotice from "./HeaderNotice"
-import { mapActions, mapGetters } from "vuex"
+import HeaderNotice from "./HeaderNotice";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
  name: "UserMenu",
@@ -51,27 +51,27 @@ export default {
   ...mapActions(["Logout"]),
   ...mapGetters(["nickname", "avatar"]),
   handleLogout () {
-   const that = this
+   const that = this;
 
    this.$confirm({
     title: "提示",
     content: "真的要注销登录吗 ?",
     onOk () {
      return that.Logout({}).then(() => {
-      window.location.reload()
+      window.location.reload();
      })
       ["catch"]((err) => {
        that.$message.error({
         title: "错误",
         description: err.message
-       })
-      })
+       });
+      });
     }
     //  , onCancel () {}
-   })
+   });
   }
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

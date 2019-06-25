@@ -53,4 +53,4 @@ export const casServiceData = () => [{
   "loading": false,
   "children": [{ "label": "更换电池（普通）", "value": "更换电池（普通）" }, { "label": "经济实惠大保健", "value": "经济实惠大保健" }]
  }, { "label": "喷漆", "value": "喷漆", "loading": false, "children": [{ "label": "喷漆", "value": "喷漆" }] }]
-}]
+}];

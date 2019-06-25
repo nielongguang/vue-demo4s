@@ -45,7 +45,7 @@ export const asyncRouterMap = [
  {
   path: "*", redirect: "/404", hidden: true
  }
-]
+];
 
 /**
  * 基础路由
@@ -94,4 +94,4 @@ export const constantRouterMap = [
   component: () => import(/* webpackChunkName: "fail" */ "@/views/exception/404")
  }
 
-]
+];

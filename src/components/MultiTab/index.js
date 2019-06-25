@@ -1,2 +1,2 @@
-import MultiTab from "./MultiTab"
-export default MultiTab
+import MultiTab from "./MultiTab";
+export default MultiTab;

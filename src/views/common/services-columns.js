@@ -43,4 +43,4 @@ export const serviceColumns = () =>
    title: "操作",
    slot: "action"
   }
- ]
+ ];

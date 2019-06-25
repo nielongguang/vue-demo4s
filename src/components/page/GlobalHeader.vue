@@ -39,11 +39,11 @@
 </template>
 
 <script>
-import UserMenu from "../tools/UserMenu"
-import SMenu from "../menu/"
-import Logo from "../tools/Logo"
+import UserMenu from "../tools/UserMenu";
+import SMenu from "../menu/";
+import Logo from "../tools/Logo";
 
-import { mixin } from "@/utils/mixin.js"
+import { mixin } from "@/utils/mixin.js";
 
 export default {
  name: "GlobalHeader",
@@ -82,29 +82,29 @@ export default {
  data () {
   return {
    headerBarFixed: false
-  }
+  };
  },
  mounted () {
-  window.addEventListener("scroll", this.handleScroll)
+  window.addEventListener("scroll", this.handleScroll);
  },
  methods: {
   handleScroll () {
    if (this.autoHideHeader) {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > 100) {
-     this.headerBarFixed = true
+     this.headerBarFixed = true;
     } else {
-     this.headerBarFixed = false
+     this.headerBarFixed = false;
     }
    } else {
-    this.headerBarFixed = false
+    this.headerBarFixed = false;
    }
   },
   toggle () {
-   this.$emit("toggle")
+   this.$emit("toggle");
   }
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

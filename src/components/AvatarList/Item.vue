@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Avatar from "ant-design-vue/es/avatar"
-import Tooltip from "ant-design-vue/es/tooltip"
+import Avatar from "ant-design-vue/es/avatar";
+import Tooltip from "ant-design-vue/es/tooltip";
 
 export default {
  name: "AvatarItem",
@@ -30,17 +30,17 @@ export default {
  data () {
   return {
    size: this.$parent.size
-  }
+  };
  },
  computed: {
   avatarSize () {
-   return (this.size !== "mini" && this.size) || 20
+   return (this.size !== "mini" && this.size) || 20;
   }
  },
  watch: {
   "$parent.size" (val) {
-   this.size = val
+   this.size = val;
   }
  }
-}
+};
 </script>

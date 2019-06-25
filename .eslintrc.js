@@ -85,7 +85,7 @@ module.exports = {
   // 禁止不必要的括号 //(a * b) + c;//报错
   "no-extra-parens": 0,
   // 禁止不必要的分号
-  "no-extra-semi": 1,
+  "no-extra-semi": 0,
   // 禁止对 function 声明重新赋值
   "no-func-assign": 1,
   // 禁止在嵌套的块中出现 function 或 var 声明
@@ -437,7 +437,7 @@ module.exports = {
   // 不允许使用三元操作符
   "no-ternary": 0,
   // 禁用行尾空格
-  "no-trailing-spaces": 1,
+  "no-trailing-spaces": 0,
   // 禁止标识符中有悬空下划线_bar
   "no-underscore-dangle": 0,
   // 禁止可以在有更简单的可替代的表达式时使用三元操作符
@@ -474,7 +474,8 @@ module.exports = {
   // 要求使用 JSDoc 注释
   "require-jsdoc": 0,
   // 要求或禁止使用分号而不是 ASI（这个才是控制行尾部分号的，）
-  "semi": ["error", "never"],
+  // "semi": ["error", "never"],
+  "semi": [2, "always"],
   // 强制分号之前和之后使用一致的空格
   "semi-spacing": 0,
   // 要求同一个声明块中的变量按顺序排列
@@ -565,6 +566,6 @@ module.exports = {
   // 强制在 yield* 表达式中 * 周围使用空格
   "yield-star-spacing": 2
  }
-}
+};
 
 

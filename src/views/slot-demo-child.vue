@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import Card from "iview/src/components/card/card"
+import Card from "iview/src/components/card/card";
 export default {
  components: { Card },
  data () {
@@ -63,46 +63,46 @@ export default {
    numbers: [1, 2, 3, 4, 5],
    items: [],
    testObj: { name: "nlg", age: "hello" }
-  }
+  };
  },
  watch: {
   // 必须为字符串否则不识别 deep表示深度搜索深度 immediate表示立刻执行
   "testObj": {
    handler (a, b) {
-    console.log(a)
-    console.log(b)
+    console.log(a);
+    console.log(b);
    },
    deep: true,
    immediate: true
   },
   items () {
-   console.log(this.items)
+   console.log(this.items);
   }
  },
  computed: {
   evenNumbers () {
    return this.numbers.filter(function (number) {
-    return number % 2 === 0
-   })
+    return number % 2 === 0;
+   });
   }
  },
  name: "slot-demo",
  methods: {
   testMethod (a) {
-   console.log(a)
+   console.log(a);
   },
   testMethod1 () {
-   this.$set(this.items, this.items.length, "hello")
-   this.$set(this.numbers, this.numbers.length, 12)
-   this.testObj.age = 11
+   this.$set(this.items, this.items.length, "hello");
+   this.$set(this.numbers, this.numbers.length, 12);
+   this.testObj.age = 11;
   },
   testMethod2 () {
-   this.numbers.splice(this.numbers.length - 1, 1)
-   this.items.splice(this.items.length - 1, 1)
+   this.numbers.splice(this.numbers.length - 1, 1);
+   this.items.splice(this.items.length - 1, 1);
   }
 
  }
-}
+};
 </script>
 
 <style scoped lang="less">

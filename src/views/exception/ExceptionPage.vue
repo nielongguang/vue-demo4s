@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import types from "./type"
+import types from "./type";
 
 export default {
  name: "Exception",
@@ -27,14 +27,14 @@ export default {
  data () {
   return {
    config: types
-  }
+  };
  },
  methods: {
   handleToHome () {
-   this.$router.push({ name: "dashboard" })
+   this.$router.push({ name: "dashboard" });
   }
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

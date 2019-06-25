@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import ALayoutSider from "ant-design-vue/es/layout/Sider"
-import Logo from "../tools/Logo"
-import SMenu from "./index"
-import { mixin, mixinDevice } from "@/utils/mixin.js"
+import ALayoutSider from "ant-design-vue/es/layout/Sider";
+import Logo from "../tools/Logo";
+import SMenu from "./index";
+import { mixin, mixinDevice } from "@/utils/mixin.js";
 
 export default {
  name: "SideMenu",
@@ -55,8 +55,8 @@ export default {
  },
  methods: {
   onSelect (obj) {
-   this.$emit("menuSelect", obj)
+   this.$emit("menuSelect", obj);
   }
  }
-}
+};
 </script>

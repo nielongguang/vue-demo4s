@@ -1,6 +1,6 @@
 // import Vue from 'vue'
-import { DEVICE_TYPE } from "@/utils/device"
-import { mapState } from "vuex"
+import { DEVICE_TYPE } from "@/utils/device";
+import { mapState } from "vuex";
 
 // const mixinsComputed = Vue.config.optionMergeStrategies.computed
 // const mixinsMethods = Vue.config.optionMergeStrategies.methods
@@ -23,13 +23,13 @@ const mixin = {
  },
  methods: {
   isTopMenu () {
-   return this.layoutMode === "topmenu"
+   return this.layoutMode === "topmenu";
   },
   isSideMenu () {
-   return !this.isTopMenu()
+   return !this.isTopMenu();
   }
  }
-}
+};
 
 const mixinDevice = {
  computed: {
@@ -39,15 +39,15 @@ const mixinDevice = {
  },
  methods: {
   isMobile () {
-   return this.device === DEVICE_TYPE.MOBILE
+   return this.device === DEVICE_TYPE.MOBILE;
   },
   isDesktop () {
-   return this.device === DEVICE_TYPE.DESKTOP
+   return this.device === DEVICE_TYPE.DESKTOP;
   },
   isTablet () {
-   return this.device === DEVICE_TYPE.TABLET
+   return this.device === DEVICE_TYPE.TABLET;
   }
  }
-}
+};
 
-export { mixin, mixinDevice }
+export { mixin, mixinDevice };

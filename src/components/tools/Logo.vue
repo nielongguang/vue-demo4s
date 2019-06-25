@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import { mixin } from "@/utils/mixin.js"
+import { mixin } from "@/utils/mixin.js";
 
 export default {
  name: "Logo",
  mixins: [mixin],
  props: {
  }
-}
+};
 </script>
 
 <style lang="less" scoped>

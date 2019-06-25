@@ -8,5 +8,5 @@
  * @returns {*[]}
  */
 export function filterEmpty (children = []) {
- return children.filter((c) => c.tag || (c.text && c.text.trim() !== ""))
+ return children.filter((c) => c.tag || (c.text && c.text.trim() !== ""));
 }

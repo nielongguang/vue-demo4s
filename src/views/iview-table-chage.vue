@@ -92,8 +92,8 @@
 </template>
 
 <script>
-import { serviceColumns } from "./common/services-columns"
-import { casServiceData } from "./common/mockData"
+import { serviceColumns } from "./common/services-columns";
+import { casServiceData } from "./common/mockData";
 
 export default {
  name: "iview-table-chage.vue",
@@ -109,7 +109,7 @@ export default {
     selectSerice: [],
     material: [{ discount: 100, soldPrice: 0, quantity: 1 }]
    }]
-  }
+  };
  },
  methods: {
   setService (v1) {
@@ -122,23 +122,23 @@ export default {
    // splice()
    // sort()
    // reverse()
-   this.serviceData.push({})
-   this.serviceData.splice(this.serviceData.length - 1, 1)
+   this.serviceData.push({});
+   this.serviceData.splice(this.serviceData.length - 1, 1);
   },
   setService1 (a, b, c) {
-   console.log(a)
-   console.log(b)
-   console.log(c)
+   console.log(a);
+   console.log(b);
+   console.log(c);
 
-   this.serviceData.push({})
-   this.serviceData.splice(this.serviceData.length - 1, 1)
+   this.serviceData.push({});
+   this.serviceData.splice(this.serviceData.length - 1, 1);
   },
   updateView () {
-   this.serviceData.push({})
-   this.serviceData.splice(this.serviceData.length - 1, 1)
+   this.serviceData.push({});
+   this.serviceData.splice(this.serviceData.length - 1, 1);
   }
  }
-}
+};
 </script>
 
 <style scoped>

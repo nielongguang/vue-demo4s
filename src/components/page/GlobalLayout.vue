@@ -72,12 +72,12 @@
 </template>
 
 <script>
-import SideMenu from "@/components/menu/SideMenu"
-import GlobalHeader from "@/components/page/GlobalHeader"
-import GlobalFooter from "@/components/page/GlobalFooter"
-import { triggerWindowResizeEvent } from "@/utils/util"
-import { mapState, mapActions } from "vuex"
-import { mixin, mixinDevice } from "@/utils/mixin.js"
+import SideMenu from "@/components/menu/SideMenu";
+import GlobalHeader from "@/components/page/GlobalHeader";
+import GlobalFooter from "@/components/page/GlobalFooter";
+import { triggerWindowResizeEvent } from "@/utils/util";
+import { mapState, mapActions } from "vuex";
+import { mixin, mixinDevice } from "@/utils/mixin.js";
 
 export default {
  name: "GlobalLayout",
@@ -91,7 +91,7 @@ export default {
   return {
    collapsed: false,
    menus: []
-  }
+  };
  },
  computed: {
   ...mapState({
@@ -100,48 +100,48 @@ export default {
   }),
   contentPaddingLeft () {
    if (!this.fixSidebar || this.isMobile()) {
-    return "0"
+    return "0";
    }
    if (this.sidebarOpened) {
-    return "256px"
+    return "256px";
    }
-   return "80px"
+   return "80px";
   }
  },
  watch: {
   sidebarOpened (val) {
-   console.log("sidebarOpened", val)
-   this.collapsed = !val
+   console.log("sidebarOpened", val);
+   this.collapsed = !val;
   }
  },
  created () {
-  this.menus = this.mainMenu.find((item) => item.path === "/").children
-  this.collapsed = !this.sidebarOpened
+  this.menus = this.mainMenu.find((item) => item.path === "/").children;
+  this.collapsed = !this.sidebarOpened;
  },
  methods: {
   ...mapActions(["setSidebar"]),
   toggle () {
-   this.collapsed = !this.collapsed
-   this.setSidebar(!this.collapsed)
-   triggerWindowResizeEvent()
+   this.collapsed = !this.collapsed;
+   this.setSidebar(!this.collapsed);
+   triggerWindowResizeEvent();
   },
   paddingCalc () {
-   let left = ""
+   let left = "";
    if (this.sidebarOpened) {
-    left = this.isDesktop() ? "256px" : "80px"
+    left = this.isDesktop() ? "256px" : "80px";
    } else {
-    left = (this.isMobile() && "0") || ((this.fixSidebar && "80px") || "0")
+    left = (this.isMobile() && "0") || ((this.fixSidebar && "80px") || "0");
    }
-   console.log("left", left)
-   return left
+   console.log("left", left);
+   return left;
   },
   menuSelect () {
    if (!this.isDesktop()) {
-    this.collapsed = false
+    this.collapsed = false;
    }
   }
  }
-}
+};
 </script>
 
 <style lang="less">

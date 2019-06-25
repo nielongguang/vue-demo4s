@@ -22,35 +22,35 @@ export default {
    pages: [],
    activeKey: "",
    newTabIndex: 0
-  }
+  };
  },
  created () {
-  this.pages.push(this.$route)
-  this.fullPathList.push(this.$route.fullPath)
+  this.pages.push(this.$route);
+  this.fullPathList.push(this.$route.fullPath);
  },
  methods: {
   onEdit (targetKey, action) {
-   this[action](targetKey)
+   this[action](targetKey);
   },
   remove (targetKey) {
    if (this.pages.length === 1) {
-    return
+    return;
    }
-   this.pages = this.pages.filter((page) => page.fullPath !== targetKey)
-   this.fullPathList = this.fullPathList.filter((path) => path !== targetKey)
+   this.pages = this.pages.filter((page) => page.fullPath !== targetKey);
+   this.fullPathList = this.fullPathList.filter((path) => path !== targetKey);
   }
  },
  watch: {
   "$route": function (newVal) {
-   this.activeKey = newVal.fullPath
+   this.activeKey = newVal.fullPath;
    if (this.fullPathList.indexOf(newVal.fullPath) < 0) {
-    this.fullPathList.push(newVal.fullPath)
-    this.pages.push(newVal)
+    this.fullPathList.push(newVal.fullPath);
+    this.pages.push(newVal);
    }
   },
   activeKey: function (newPathKey) {
-   this.$router.push({ path: newPathKey })
+   this.$router.push({ path: newPathKey });
   }
  }
-}
+};
 </script>
