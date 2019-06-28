@@ -21,7 +21,25 @@ export const asyncRouterMap = [
       path: "/dashboard/workplace",
       name: "Workplace",
       component: () => import("@/views/dashboard"),
-      meta: { title: "工作台", keepAlive: true }
+      meta: { title: "gzt", keepAlive: true }
+     },
+     {
+      path: "/dashboard/change",
+      name: "change",
+      component: () => import("@/views/iview-table-chage.vue"),
+      meta: { title: "change", keepAlive: true }
+     },
+     {
+      path: "/dashboard/wks",
+      name: "wks",
+      component: () => import("@/views/dashboard"),
+      meta: { title: "wks", keepAlive: true }
+     },
+     {
+      path: "/dashboard/about",
+      name: "about",
+      component: () => import("@/views/slot-demo-parent"),
+      meta: { title: "about", keepAlive: true }
      }
     ]
    },

@@ -96,7 +96,7 @@ import { serviceColumns } from "./common/services-columns";
 import { casServiceData } from "./common/mockData";
 
 export default {
- name: "iview-table-chage.vue",
+ name: "IviewTableChage",
  data () {
   return {
    serviceColumns: serviceColumns(),
