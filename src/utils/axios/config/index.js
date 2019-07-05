@@ -21,16 +21,15 @@ export default {
      * @description api请求基础路径
      */
  baseUrl: {
-  dev: "http://test-o2o-store-all.iauto360.cn/",
-  pro: "http://test-o2o-store-all.iauto360.cn/"
+  dev: "http://localhost:19090.iauto360.cn/",
+  pro: "http://localhost:19090.iauto360.cn/"
  },
 
  pictureUrl: {
-  // dev:'http://test-jh.iauto360.cn/image/pics/card/userCardPics/',
-  dev: "http://test-jh.iauto360.cn/image/pics/card/userCardPics/",
-  pro: "http://test-jh.iauto360.cn/image/pics/card/userCardPics/",
-  test: "http://jh.iauto360.cn/image/pics/card/userCardPics/",
-  now: "http://test-jh.iauto360.cn/image/pics/card/userCardPics/"
+  dev: "http://localhost:8080/image/pics/card/userCardPics/",
+  pro: "http://localhost:8080/image/pics/card/userCardPics/",
+  test: "http://localhost:8080/image/pics/card/userCardPics/",
+  now: "http://localhost:8080/image/pics/card/userCardPics/"
  },
 
  /**

@@ -10,9 +10,11 @@ import "@/permission"; // permission control
 import "@/utils/filter"; // global filter
 
 Vue.config.productionTip = false;
-Vue.use(VueAxios, router);
+Vue.use(VueAxios);
+
 
 new Vue({
+  // @ts-ignore
  router,
  store,
  created() {
